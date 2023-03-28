@@ -1,9 +1,18 @@
 const mongoose = require('mongoose');
 
 const songSchema = new mongoose.Schema({
-    title: String,
-    url: String,
-    tag: String,
+    title: {
+        type: String,
+        require: true,
+    },
+    url: {
+        type: String,
+        require: true,
+    },
+    tag: {
+        type: String,
+        default: "netural"
+    },
     thumbnail: String
 })
 
