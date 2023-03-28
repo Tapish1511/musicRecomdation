@@ -20,9 +20,13 @@ function HomePage(){
         .withFaceLandmarks()
         .withFaceExpressions()
         .withAgeAndGender()
-        let temp = JSON.stringify(detection)
-        setDetection(JSON.parse(temp));
-        
+        if(detection !== null || detection !==undefined){
+            let temp = JSON.stringify(detection)
+            setDetection(JSON.parse(temp));
+        }
+        else{
+            setDetection(detection);
+        }
         let max = 0;
         let expre = null
         for (let exper in detection.expressions){
@@ -34,14 +38,8 @@ function HomePage(){
         setExp(expre);
         setAge(detection.age.toFixed(0))
         setGen(detection.gender)
-        console.log(detection);
-        return new Promise((resolve, reject)=>{
-            setTimeout(()=>{
-                resolve(expre);
-            },1000)
-        })
+        console.log(detection); 
         
-
     }
 
     useEffect(()=>{

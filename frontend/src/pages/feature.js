@@ -4,11 +4,12 @@ import styles from "../css/main.module.css"
 function FeatureList({detections, exp, age, gen}){
 
     
-    if(detections === null || detections === undefined){
+    if(detections === undefined){
         return <div>
             face not detected
         </div>
     }
+    else if(detections === null) return <></>
 
    
     
