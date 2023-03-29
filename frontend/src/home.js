@@ -19,13 +19,15 @@ function HomePage(){
         .detectSingleFace(imgRef.current, new faceapi.TinyFaceDetectorOptions())
         .withFaceLandmarks()
         .withFaceExpressions()
-        .withAgeAndGender()
-        if(detection !== null || detection !==undefined){
-            let temp = JSON.stringify(detection)
+        .withAgeAndGender();
+
+        let temp = JSON.stringify(detection)
+        if(temp != null || temp != undefined){
             setDetection(JSON.parse(temp));
         }
         else{
             setDetection(detection);
+            return null;
         }
         let max = 0;
         let expre = null
@@ -66,6 +68,7 @@ function HomePage(){
     }, [imgSrc])
 
     return(<>
+    
     <div className={styles.container}>
 
         <div className={styles.leftDiv}>
@@ -78,6 +81,7 @@ function HomePage(){
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci quisquam, corporis provident quibusdam cumque, officiis quam quis perferendis rerum explicabo deleniti pariatur architecto illo ex, labore aut? Minus, laborum?
         </div>
         <img src={imgSrc} ref={imgRef} alt="" className={styles.hiddenImage}/>
+        
     </div>
     </>);
 }
