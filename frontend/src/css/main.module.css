@@ -7,6 +7,73 @@
     justify-content: space-between;
 }
 
+.leftDiv{
+    grid-column: 1;
+    /* padding: 5px 10px; */
+}
+
+
+.camera{
+    width: 100% !important;
+    height: auto;
+    transform: rotateY(180deg);
+    border: 1px solid rgb(95, 95, 95);
+}
+
+.searchBtn{
+    background-color: rgb(3, 171, 70);
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    padding: 10px 5px;
+    display: block;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    transition: color 500ms ease ,background 500ms ease;
+}
+
+.searchBtn:hover{
+    cursor: pointer;
+    color: rgb(225, 225, 225);
+    background-color: rgb(2, 145, 59);
+}
+
+.itemList{
+    margin: 2em 0;
+    width: 100%;
+}
+
+.itemList>li:first-child{
+    background-color: rgb(175, 175, 175);
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+.item span{
+    border: 1px solid black;
+    padding: 5px 0;
+    width: 50%;
+}
+
+.hiddenImage{
+    visibility: hidden;
+    position: absolute;
+    z-index: -1000;
+}
+
+.rightDiv{
+    grid-column: 2;
+    border: 1px solid rgb(225, 225, 225);
+    height: calc(100vh - 10px);
+    overflow-y: hidden;
+}
+
 
 @media screen and (max-width: 1000px) {
     .container{
@@ -15,6 +82,7 @@
     }
     
 }
+
 @media screen and (max-width: 550px) {
     .container{
         grid-template-columns: 100%;
@@ -30,54 +98,3 @@
         grid-column: 1 !important;
     }
 }
-
-.leftDiv{
-    grid-column: 1;
-    /* padding: 5px 10px; */
-}
-.rightDiv{
-    grid-column: 2;
-    padding: 5px 10px;
-}
-.camera{
-    width: 100% !important;
-    height: auto;
-}
-
-.searchBtn{
-    background-color: rgb(3, 171, 70);
-    font-size: 1em;
-    color: white;
-    font-weight: bold;
-    padding: 10px 5px;
-    display: block;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    width: 100%
-}
-
-.itemList{
-    margin: 2em 0;
-    width: 100%;
-}
-.itemList>li:first-child{
-    background-color: rgb(175, 175, 175);
-}
-.item{
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2em;
-}
-.item span{
-    border: 1px solid black;
-    padding: 5px 0;
-    width: 50%;
-}
-
-.hiddenImage{
-    visibility: hidden;
-    position: absolute;
-}
-
-
