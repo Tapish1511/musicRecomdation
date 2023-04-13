@@ -1,0 +1,35 @@
+.navContainer{
+    display: flex;
+    box-shadow: 0 2px 5px 2px rgb(209, 209, 209);
+    margin: 0 0 10px 0;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Name h1{
+    padding: 5px;
+}
+.navItemList{
+    display: flex;
+    min-width: 200px;
+    justify-content: space-between;
+}
+
+.navItemList>li{
+    list-style: none;
+}
+
+.navItemList a, .navItemList Link{
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all ease 300ms;
+    font-weight: bold;
+}
+
+.navItemList a:hover, .navItemList Link:hover{
+    background-color: rgba(101, 101, 101, 0.127);
+    border-radius: 5px;
+}
