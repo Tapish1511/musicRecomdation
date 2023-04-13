@@ -4,6 +4,7 @@ import WebcamCapture from './pages/webCamCapture';
 import FeatureList from './pages/feature';
 import * as faceapi from 'face-api.js';
 import RighDivContent from './pages/songList';
+import NavBar from './pages/navbar';
 
 const selectSongContext = React.createContext();
 
@@ -110,20 +111,17 @@ function HomePage(){
     }, [exp])
 
 
+    // const container = useRef();
+    const navbar = useRef();
+    const [height, setHeight] = useState(0);
+    useEffect(()=>{
+        setHeight(navbar.current.clientHeight);
 
-
-    // useEffect(()=>{
-
-    //     window.addEventListener('resize', ()=>{
-    //         if(window.innerWidth.toFixed(0) > 550){
-    //             rightDivRef.current.style.height='100vh'
-    //         }
-    //     })
-        
-    // },[])
+    }, [])
 
     return(<selectSongContext.Provider value={selectSong}>
-    <div className={styles.container}>
+    <NavBar Ref={navbar}/>
+    <div className={styles.container} style={{height: `calc(100vh - 10px - ${height}px)`}}>
         <div className={styles.leftDiv}>
             <div className={styles.cameraDiv}>
                 <WebcamCapture setImgSrc={setImgSrc} exp={exp}></WebcamCapture>
