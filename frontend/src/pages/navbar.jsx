@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import styles from '../css/nav.module.css'
 
 
-function NavBar(){
+function NavBar({Ref}){
 
     return(
         <>
-            <nav className={styles.navContainer}>
+            <nav ref={Ref}className={styles.navContainer}>
                 <div className={styles.Name}>
                     <h1>Music Recommendation</h1>
                 </div>
