@@ -7,6 +7,17 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.Name{
+    display: flex;
+    align-items: center;
+}
+.Name>div{
+    width: 70px;
+}
+.Name img{
+    width: 100%;
+    height: auto;
+}
 
 .Name h1{
     padding: 5px;

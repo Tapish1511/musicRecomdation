@@ -9,7 +9,8 @@ function NavBar({Ref}){
         <>
             <nav ref={Ref}className={styles.navContainer}>
                 <div className={styles.Name}>
-                    <h1>Music Recommendation</h1>
+                    <div><img src="logo.png" alt="logo" /></div>
+                    <h1> Music Recommendation</h1>
                 </div>
                 <div className={styles.navItems}>
                     <ul className={styles.navItemList}>
