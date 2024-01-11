@@ -15,7 +15,7 @@ function NavBar({Ref}){
                 <div className={styles.navItems}>
                     <ul className={styles.navItemList}>
                         <li><Link to='/about'>About us</Link></li>
-                        <li><a href="https://github.com/Tapish1511/musicRecomdation" target="_blank">Code</a></li>
+                        <li><a href="https://github.com/anjalikumawat2002/Music_recommendation" target="_blank">Code</a></li>
                     </ul>
                 </div>
             </nav>
